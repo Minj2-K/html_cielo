@@ -1,0 +1,45 @@
+// 메인페이지
+@charset 'UTF-8';
+@import 'reset', 'variables';
+// Portfolio Page
+.sec-g {   
+    display: flex; 
+    justify-content: space-between;
+    padding: 120px 0;
+    
+    .sec-cont{
+        width: 600px; height: 400px;
+            margin-left: 30px;
+        img{
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition:all .2s;
+            border-radius: 12px;
+            &:hover{
+            transform: scale(1.01,1.01);
+            }
+        }
+    }
+    .sec-txt{
+        margin-left: 30px;
+        width: 500px;
+        .sec-tit{
+            padding: 30px 0;
+        }
+    }
+    
+    .more{
+        display: block;
+        width: 100px;
+        margin-top: 10px;
+        color: $primary;
+        &::after{
+            content: "\f105";
+            font-family: 'Line Awesome Free';
+             font-weight: 900;
+            }
+            &:hover {
+                color: $gray-7;
+            }
+        }  
+    }

@@ -1,0 +1,153 @@
+@charset 'UTF-8';
+@import 'reset', 'variables','portfolio', 'about', 'work1_details';
+
+#header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1;
+    justify-content: space-between;
+    padding: 15px 0;
+    
+    .navbar-brand {
+        display: block;
+        width: 88px; height: 35px;
+        text-indent: -9999px;
+        background-image: url(../../images/portfolo_logo.png) ;
+        background-repeat: no-repeat;
+    }
+    .nav-item > a {
+        display: block;
+        color: $b;
+        font-weight: 700;
+    }
+
+    &.sticky {
+        background: $w; border-bottom: 1px solid #eee;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
+    }
+
+     // 현재페이지 표시
+     #gnb{
+        .current-page-item{
+            color: $primary;
+        }
+    }
+
+    // details Page에서 헤더 fixed 없애기
+    &.header-nonfixed{
+        position: relative;
+    }
+}
+
+#gnb {
+    .nav-depth1 > li {
+        a{
+            display: block;
+            height: 55px; line-height: 55px;
+            padding: 0 25px;
+            font-size: 1.4em;
+            &:hover, &:focus{
+                color : $primary;
+            }
+        }
+    }
+   
+    .nav-bg {
+        position: absolute; top: 55px;left: 0;right: 0;
+        height: 0; /* 160px */ opacity: 0; transition: all .5s;
+        background-color: $w;
+        border-top: 1px solid #eee; border-bottom: 1px solid #eee;
+    }
+}
+
+#about-main, #main{
+    padding: 120px 0;
+}
+ 
+// work-nav 현재 페이지 표시
+#details-main{
+    padding: 35px 0;
+    .current-page-work{
+        color: $primary;
+    }
+}
+.work-nav{
+    text-align: center;
+    a{      
+   display: inline-block;
+   padding: 0 20px;
+   font-weight: bold;
+   &:hover{
+       color: $primary;
+       }
+   }
+}
+
+
+#contacts{
+    .container{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .sec-tit{
+        margin: 30px 0;
+    }
+    .lin{  
+        &:hover{
+            color: $gray-7;
+        }
+    }
+    
+}
+
+#footer {
+    padding: 20px 0;
+    background:$gray-a;  color: $w;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+} 
+.copyright{
+    margin: auto 0;
+    &::before{
+        content: "\f1f9";
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+        
+        }
+        
+    }
+.goto{
+    display: flex;
+    justify-content: space-between; 
+    .linkedin, .behance, .dribbble{
+        font-family: 'Line Awesome Brands';
+        font-size: 2.2em;
+        margin: 0 10px;
+        color: $w;
+    }
+
+    .linkedin{
+    &::before{
+        content: "\f08c";      
+        }
+    }
+    .behance{
+    &::before{
+        content: "\f1b4";       
+        }
+    }
+    .dribbble{
+        &::before{
+            content: "\f17d";          
+            }
+        }
+
+}
+
+.ani-scroll {
+    transform: translateY(50px); opacity: 0;
+    transition: all 1s;
+    &.ani-top {
+         transform: translateY(0);opacity: 1;
+    }
+}

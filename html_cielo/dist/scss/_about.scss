@@ -1,0 +1,54 @@
+// 서브페이지
+@charset 'UTF-8';
+@import  'reset', 'variables';
+// About Page
+#about-main{
+    .aboutme{
+        display: flex;
+        justify-content: space-between;
+    }
+    .aboutme-tit{
+        font-size: 3em;
+        line-height: 1.5;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+    .aboutme-en{
+        font-size: 1.3em;
+        line-height: 2;
+        font-family:Malgun Gothic;
+        padding-right: 120px;
+        span{
+            color: $primary;
+        }
+        .aboutme-email, .aboutme-lin{
+            &:hover{
+                color: $gray-7  ;
+            }
+        }
+    }
+    .aboutme-box{
+        .box1, .box2{
+            border: 1px solid $gray-e;
+            padding: 0 67px;
+            background-color: $lightblue
+        }
+        .box1{
+            margin-top: 200px;
+        }
+        .box2{
+            margin-top: 30px;
+        }
+        .box1-tit, .box2-tit{
+            border-bottom: 1px solid $gray-7;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+        .box1-cont, .box2-cont{
+            padding: 10px 0;
+            line-height: 2;
+        }
+        
+    }
+}
